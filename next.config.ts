@@ -7,6 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   images: {
     localPatterns: [
       {
@@ -20,7 +21,6 @@ const nextConfig: NextConfig = {
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
       '.mjs': ['.mts', '.mjs'],
     }
-
     return webpackConfig
   },
   turbopack: {
