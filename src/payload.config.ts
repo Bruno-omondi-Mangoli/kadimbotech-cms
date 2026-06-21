@@ -21,22 +21,13 @@ export default buildConfig({
     user: Users.slug,
     meta: {
       titleSuffix: '— Kadimbotech CMS',
-      favicon: '/favicon.ico',
     },
     importMap: {
       baseDir: path.resolve(dirname),
     },
   },
 
-  collections: [
-    Users,
-    Media,
-    Posts,
-    Projects,
-    Testimonials,
-    Subscribers,
-    ContactSubmissions,
-  ],
+  collections: [Users, Media, Posts, Projects, Testimonials, Subscribers, ContactSubmissions],
 
   editor: lexicalEditor(),
 
@@ -55,13 +46,7 @@ export default buildConfig({
   sharp,
   plugins: [],
 
-  cors: [
-    'http://localhost:3000',
-    'https://kadimbotechsolutions.online',
-  ],
+  cors: ['http://localhost:3000', 'https://kadimbotechsolutions.online'],
 
-  csrf: [
-    'http://localhost:3000',
-    'https://kadimbotechsolutions.online',
-  ],
+  csrf: ['http://localhost:3000', 'https://kadimbotechsolutions.online'],
 })
