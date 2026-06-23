@@ -46,7 +46,7 @@ export default buildConfig({
   sharp,
   plugins: [],
 
-  cors: ['http://localhost:3000', 'https://kadimbotechsolutions.online'],
+  cors: ['http://localhost:3000', 'https://kadimbotech-frontend.vercel.app'],
 
-  csrf: ['http://localhost:3000', 'https://kadimbotechsolutions.online'],
+  csrf: ['http://localhost:3000', 'https://kadimbotech-frontend.vercel.app'],
 })
