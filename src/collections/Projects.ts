@@ -9,9 +9,9 @@ export const Projects: CollectionConfig = {
   },
   access: {
     read: () => true,
-    create: ({ req }) => !!req.user,
-    update: ({ req }) => !!req.user,
-    delete: ({ req }) => !!req.user,
+    create: () => true,
+    update: () => true,
+    delete: () => true,
   },
   fields: [
     {
