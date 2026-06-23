@@ -8,9 +8,10 @@ export const Subscribers: CollectionConfig = {
     description: 'Newsletter subscribers. Export this list to send email campaigns.',
   },
   access: {
-    read: ({ req }) => {
-      return req.user !== null
-    },
+    read: ({ req }) => Boolean(req.user),
+    create: () => true,
+    update: ({ req }) => Boolean(req.user),
+    delete: ({ req }) => Boolean(req.user),
   },
   fields: [
     {
