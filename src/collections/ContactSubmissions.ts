@@ -8,10 +8,10 @@ export const ContactSubmissions: CollectionConfig = {
     description: 'Contact form submissions from the website.',
   },
   access: {
-    read: ({ req }) => {
-      return req.user !== null
-    },
+    read: () => true,
     create: () => true,
+    update: () => true,
+    delete: () => true,
   },
   fields: [
     {
